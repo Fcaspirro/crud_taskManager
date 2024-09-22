@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Início - Grupo Vila Velha";
+}
+
+
+<div class="text-center my-5">
+    <h1 class="mb-3">Seja bem-vindo ao Gerenciador de Tarefas!</h1>
+    <p>Organize suas tarefas de maneira simples e eficiente. Aqui é possível verificar as quatro operações do desenvolvimento de uma aplicação, sendo elas: Criar, Ler, Atualizar e Apagar, um acrônimo mais conhecido como CRUD (Create, Read, Update and Delete).</p>
+</div>
+
+<div class="text-center resume">
+    <h3>Resumo das Tarefas</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card pending-status mb-3">
+                <div class="card-header">Pendentes</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["PendingCount"]</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card progress-status mb-3">
+                <div class="card-header">Em Andamento</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["InProgressCount"]</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card complete-status mb-3">
+                <div class="card-header">Concluídas</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["CompletedCount"]</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center btn-managment">
+    <a href="@Url.Action("Index", "Task")" class="btn" id="managment-task">Gerenciar Tarefas</a>
+</div>

@@ -1,0 +1,48 @@
+﻿<div class="modal fade" id="new-task-modal" tabindex="-1" role="dialog" aria-labelledby="new-task-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Cadastrar nova tarefa</h3>
+                <button type="button" id="close-new-task" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="new-task-form" action="">
+                    <div class="form-group">
+                        <label for="task-id">ID</label>
+                        <input type="text" class="form-control" id="task-id" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-title">Título</label>
+                        <input type="text" class="form-control" id="task-title" placeholder="Digite o título da tarefa" maxlength="25">
+                        <div class="text-danger" id="title-error-create" style="display:none;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-desc">Descrição</label>
+                        <textarea style="resize: none" class="form-control" id="task-desc" placeholder="Digite a descrição da tarefa" maxlength="50"></textarea>
+                        <div class="text-danger" id="desc-error-create" style="display:none;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-status">Status</label>
+                        <select class="form-control" id="task-status">
+                            <option value="" selected disabled>Selecione o status desejado</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluído">Concluído</option>
+                        </select>
+                        <div class="text-danger" id="status-error-create" style="display:none;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-date">Data de Conclusão</label>
+                        <input type="date" class="form-control" id="task-date">
+                        <div class="text-danger" id="date-error-create" style="display:none;"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" id="add-new-task">Adicionar nova tarefa</button>
+            </div>
+        </div>
+    </div>
+</div>

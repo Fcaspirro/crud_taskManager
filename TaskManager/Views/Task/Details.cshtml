@@ -1,0 +1,20 @@
+﻿@model TaskManager.Models.TaskItem
+@{
+    ViewData["Title"] = "Detalhes da Tarefa";
+}
+
+<div class="container mt-4">
+    <h2>Detalhes da Tarefa</h2>
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title title-desc">@Model.Title</h3>
+            <p class="card-text"><strong>ID:</strong> @Model.Id</p>
+            <p class="card-text"><strong>Descrição:</strong> @Model.Description</p>
+            <p class="card-text"><strong>Status:</strong> @Model.Status</p>
+            <p class="card-text">
+                <strong>Data de Conclusão:</strong> @(Model.DueDate.HasValue ? Model.DueDate.Value.ToString("dd/MM/yyyy") : "Não especificada")
+            </p>
+        </div>
+    </div>
+    <a href="@Url.Action("Index", "Task")" class="btn mt-3" id="btn-back">Voltar</a>
+</div>

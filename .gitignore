@@ -1,0 +1,26 @@
+# Diretórios de saída
+bin/
+obj/
+
+# Arquivos de configuração do Visual Studio
+.vs/
+*.sln
+.ide
+
+# Arquivos de log
+*.log
+
+# Arquivos de configuração de ambiente
+appsettings.Development.json
+appsettings.*.json
+
+# Diretórios de pacotes NuGet
+packages/
+*.nupkg
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Cache do NuGet
+.nuget/

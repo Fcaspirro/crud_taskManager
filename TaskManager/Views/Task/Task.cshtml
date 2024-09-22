@@ -1,0 +1,118 @@
+﻿@model List<TaskManager.Models.TaskItem>
+@{
+    ViewData["Title"] = "Gerenciador de Tarefas";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" id="dashboard-nav">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="all-details-nav">Todas as Tarefas</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main content -->
+            <div class="wrapper-content">
+                <div id="dashboard-section">
+                    <div class="header-table">
+                        <h1 class="mb-5">Bem-vindo ao Gerenciador de Tarefas</h1>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h2>Suas Tarefas</h2>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#new-task-modal" id="new-task">
+                                Adicionar tarefa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Task list -->
+                    <div class="task-list">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Título</th>
+                                        <th>Descrição</th>
+                                        <th>Status</th>
+                                        <th>Data de Conclusão</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="taskTable">
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        foreach (var task in Model)
+                                        {
+                                            <tr>
+                                                <td>@task.Id</td>
+                                                <td>@task.Title</td>
+                                                <td>@task.Description</td>
+                                                <td>@task.Status</td>
+                                                <td>
+                                                    @(task.DueDate.HasValue ? task.DueDate.Value.ToShortDateString() : "Não especificada")
+                                                </td>
+                                                <td>
+                                                    <button class="edit-btn btn btn-sm" data-id="@task.Id" data-toggle="modal" data-target="#edit-task-modal" id="edit-task">Editar</button>
+                                                    <a href="@Url.Action("Details", "Task", new { id = task.Id })" class="details-btn btn btn-sm" id="details-task">Details</a>
+                                                    <button class="delete-btn btn btn-sm" data-id="@task.Id" data-url="@Url.Action("Delete", "Task", new { id = task.Id })" id="delete-task">Excluir</button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="6">Nenhuma tarefa cadastrada.</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>        
+                        </div>
+                    </div>
+                </div>
+
+                <div id="all-details-section" class="content-section" style="display: none;">
+                    <h2 class="mb-5">Todas as Tarefas</h2>
+                    <div class="task-list details-list">
+                        <div class="card-columns">
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var task in Model)
+                                {
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h3 class="card-title title-desc">@task.Title</h3>
+                                            <p class="card-text"><strong>ID:</strong> @task.Id</p>
+                                            <p class="card-text"><strong>Descrição:</strong> @task.Description</p>
+                                            <p class="card-text"><strong>Status:</strong> @task.Status</p>
+                                            <p class="card-text">
+                                                <strong>Data de Conclusão:</strong> @(task.DueDate.HasValue ? task.DueDate.Value.ToString("dd/MM/yyyy") : "Não especificada")
+                                            </p>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="alert alert-info" role="alert">
+                                    Nenhuma tarefa cadastrada até o momento.
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<partial name="~/Views/Shared/_CreateTaskModal.cshtml" />
+<partial name="~/Views/Shared/_EditTaskModal.cshtml" />
