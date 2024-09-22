@@ -128,7 +128,7 @@ nav.navbar {
 }
 
 .btn-managment {
-    margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 #managment-task {
@@ -314,6 +314,10 @@ footer {
 
     .resume .row {
         flex-direction: row;
+    }
+
+    .btn-managment {
+        margin-top: 8rem;
     }
 
     .nav .nav-link {
