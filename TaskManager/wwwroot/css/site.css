@@ -11,13 +11,18 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #f3f4f6;
     width: 100%;
     height: 100vh;
     font-size: 1.6rem;
     color: #030712;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+}
+
+::selection {
+    background-color: #030712;
+    color: #f3f4f6;
 }
 
 a {
@@ -51,7 +56,7 @@ li {
 }
 
 .nav .nav-link.active {
-    border-bottom: 2px solid #cc9f51;
+    border-bottom: 2px solid #030712;
     transition: all .3s ease;
 }
 
@@ -87,14 +92,9 @@ ul.navbar-nav {
 }
 
 ul.navbar-nav li {
-    height: 4.4rem;
     display: flex;
     align-items: center;
-    padding: 1rem;
-}
-
-ul.navbar-nav li:first-child {
-    border-right: 1px solid #e5e5e5;
+    padding: 0 1rem;
 }
 
 .bg-dark {
@@ -102,21 +102,21 @@ ul.navbar-nav li:first-child {
 }
 
 nav.navbar {
-    background: #ffffff !important;
+    background: #f3f4f6 !important;
 }
 
 .navbar .nav-link:hover {
-    color: rgba(180,146,89,0.71);
+    color: rgb(50, 50, 56);
 }
 
 .navbar .nav-link.active {
-    color: #cc9f51;
+    color: #030712;
     font-weight: 500;
 }
 
 .resume {
     margin: 6rem 0;
-    color: black;
+    color: #030712;
     padding: 2rem;
 }
 
@@ -144,6 +144,7 @@ nav.navbar {
 .task-list {
     position: absolute;
     max-height: 80%;
+    min-width: 100%;
     overflow: auto;
 }
 
@@ -152,8 +153,8 @@ nav.navbar {
 }
 
 .task-list.details-list .alert-info {
-    color: black;
-    background-color: rgb(204, 159, 81);
+    color: #f3f4f6;
+    background-color: #030712;
     border-color: transparent;
 }
 
@@ -176,7 +177,7 @@ nav.navbar {
 }
 
 #new-task {
-    color: #030712;
+    color: #f3f4f6;
 }
 
 #managment-task,
@@ -185,7 +186,8 @@ nav.navbar {
 #edit-task,
 #btn-back,
 #save-edit-task {
-    background: #cc9f51;
+    background: #030712;
+    color: #f3f4f6;
 }
 
 #managment-task:hover,
@@ -194,15 +196,16 @@ nav.navbar {
 #edit-task:hover,
 #btn-back:hover,
 #save-edit-task:hover {
-    background: rgba(180,146,89,0.71);
+    background: rgb(50, 50, 56);
 }
 
 .title-desc {
-    color: #cc9f51;
+    color: #030712;
+    font-weight: bold;
 }
 
 #details-task {
-    background: #c9c9c9;
+    background: #d4d4d8;
 }
 
 #details-task:hover {
@@ -211,7 +214,7 @@ nav.navbar {
 
 #delete-task {
     background: #dc2626;
-    color: white;
+    color: #f3f5f6;
 }
 
 #delete-task:hover {
@@ -244,7 +247,7 @@ nav.navbar {
 }
 
 .close:hover {
-    color: #cc9f51;
+    color: #030712;
     transition: all .3s ease;
 }
 
@@ -265,7 +268,7 @@ footer {
 .copy {
     min-width: 11.5rem;
     background: #f3f4f6;
-    border: 0.5px solid #9ca3af;
+    border: 0.5px solid #d4d4d8;
     border-radius: 0.6rem;
 }
 
@@ -281,12 +284,14 @@ footer {
 }
 
 .copy:hover a {
-    background: #cc9f51;
+    background: #030712;
+    border-radius: 0.6rem;
+    color: #f3f4f6;
     transition: all .3s ease;
 }
 
 /***** Tablet *****/
-@media (min-width: 768px) {
+@media (min-width: 768px) {    
     .dashboard {
         margin: 2.4rem 0;
         display: flex;
@@ -325,14 +330,24 @@ footer {
     }
 
     .nav .nav-link.active {
-        background: #9ca3af;
+        background: #030712;
+        color: #f3f4f6;
         border: none;
+    }
+
+    ul.navbar-nav li:first-child {
+        border-right: 1px solid #d4d4d8;
+    }
+
+    ul.navbar-nav li {
+        height: 4.4rem; 
+        padding: 1rem;
     }
 
     .sidebar {
         width: 20%;
         height: 80vh;
-        border-right: 1px solid #9ca3af;
+        border-right: 1px solid #d4d4d8;
         padding: 0;
     }
 
