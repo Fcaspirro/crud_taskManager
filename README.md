@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img width="150px" height:"75px" alt="logo Task Management CRUD" title="logo" src="TaskManager/wwwroot/assets/github/logo-crud.png"/>
+	<img width="300px" alt="logo Task Management CRUD" title="logo" src="TaskManager/wwwroot/assets/images/logo.png"/>
 </h3>
 
 <h5 align="center"> 
@@ -38,9 +38,10 @@ Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de t
 #### Funcionalidades
 - **Resumo de Tarefas** - Visualização dos status das tarefas criadas na home.
 - **CRUD - Dashboard** - É Possível criar, editar, ver detalhes e excluir tarefas.
-- **Interação** - Realizado interação back-end e front-end via AJAX
+- **Validação de Formulário** - Validação de formulário ao tentar criar ou editar uma tarefa sem o preenchimento correto dos dados.
+- **Validação de exclusão** - Alerta com questionamento ao tentar excluir uma tarefa.
+- **Interação** - Realizado interação back-end e front-end via AJAX, sem recarregamento de página.
 - **Todas as tarefas** - É possível verificar todos os detalhes das tarefas.
-
 
 #### Usabilidade
 - Interface disponível para desktop, tablet e mobile (responsivo).
@@ -51,8 +52,8 @@ Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de t
 
 | Desenvolvimento Front-end              | Desenvolvimento Back-end                                  | IDE                                                         |
 |----------------------------------------|--------------------------------------------------         |-------------------------------------------------------------|
-| HTML                                   | [.NET](https://dotnet.microsoft.com/pt-br/)               | [Visual Studio Code](https://code.visualstudio.com/)        |
-| CSS                                    | [C#](https://dotnet.microsoft.com/pt-br/languages/csharp) | [Visual Studio ](https://visualstudio.microsoft.com/pt-br/) |
+| HTML                                   | [.NET](https://dotnet.microsoft.com/pt-br/)               | [Visual Studio ](https://visualstudio.microsoft.com/pt-br/) |
+| CSS                                    | [C#](https://dotnet.microsoft.com/pt-br/languages/csharp) | 
 | [JavaScript](https://javascript.com)   |    
 | [Jquery](https://jquery.com/)          |
 | [BootStrap](https://getbootstrap.com/) |
