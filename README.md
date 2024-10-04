@@ -50,10 +50,10 @@ Projeto desenvolvido com ASP.NET Core 6.0 MVC e C#, voltado para o gerenciamento
 
 ## Stacks
 
-| Desenvolvimento Front-end              | Desenvolvimento Back-end                                  | IDE                                                         |
-|----------------------------------------|--------------------------------------------------         |-------------------------------------------------------------|
-| HTML                                   | [.NET](https://dotnet.microsoft.com/pt-br/)               | [Visual Studio ](https://visualstudio.microsoft.com/pt-br/) |
-| CSS                                    | [C#](https://dotnet.microsoft.com/pt-br/languages/csharp) | 
+| Desenvolvimento Front-end              | Desenvolvimento Back-end                                       | IDE                                                         |
+|----------------------------------------|----------------------------------------------------------------|-------------------------------------------------------------|
+| HTML                                   | [ASP.NET Core](https://dotnet.microsoft.com/pt-br/apps/aspnet) | [Visual Studio ](https://visualstudio.microsoft.com/pt-br/) |
+| CSS                                    | [C#](https://dotnet.microsoft.com/pt-br/languages/csharp)      | 
 | [JavaScript](https://javascript.com)   |    
 | [Jquery](https://jquery.com/)          |
 | [BootStrap](https://getbootstrap.com/) |
