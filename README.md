@@ -10,7 +10,7 @@
 
 ## Descrição
 
-Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de tarefas. A aplicação implementa as operações de CRUD (Create, Read, Update e Delete) para permitir a criação, leitura, atualização e exclusão de tarefas de forma eficiente.
+Projeto desenvolvido com ASP.NET Core 6.0 MVC e C#, voltado para o gerenciamento de tarefas. A aplicação implementa as operações de CRUD (Create, Read, Update e Delete) para permitir a criação, leitura, atualização e exclusão de tarefas de forma eficiente.
 
 ---
 
@@ -28,7 +28,7 @@ Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de t
 ## Demonstração
 
  <div align="center">
-   <img width="100%" alt="Ilustração do projeto CRUD feito com ASP.NET 6.0 MVC C# para gerenciamento de tarefas" title="Crud Task management" src="TaskManager/wwwroot/assets/github/project-crud.png"/> 
+   <img width="100%" alt="Ilustração do projeto CRUD feito com ASP.NET Core 6.0 MVC C# para gerenciamento de tarefas" title="Crud Task management" src="TaskManager/wwwroot/assets/github/project-crud.png"/> 
  </div>
   
 ---
@@ -36,10 +36,10 @@ Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de t
 ## Interface
 
 #### Funcionalidades
-- **Resumo de Tarefas** - Visualização dos status das tarefas criadas na home.
+- **Resumo de Tarefas** - Visualização dos status das tarefas criadas.
 - **CRUD - Dashboard** - É Possível criar, editar, ver detalhes e excluir tarefas.
 - **Validação de Formulário** - Validação de formulário ao tentar criar ou editar uma tarefa sem o preenchimento correto dos dados.
-- **Validação de exclusão** - Alerta com questionamento ao tentar excluir uma tarefa.
+- **Validação de exclusão** - Alerta ao tentar excluir uma tarefa.
 - **Interação** - Realizado interação back-end e front-end via AJAX, sem recarregamento de página.
 - **Todas as tarefas** - É possível verificar todos os detalhes das tarefas.
 
@@ -63,8 +63,8 @@ Projeto desenvolvido com ASP.NET 6.0 MVC e C#, voltado para o gerenciamento de t
 
 ## Como rodar
 
-1 - Necessário .NET 6.0
-2 - Instalar Visual Studio com configurações e suporte à  ASP.NET MVC e C#
+1 - Necessário .NET 6.0 <br>
+2 - Instalar Visual Studio com configurações e suporte à ASP.NET Core 6.0 MVC e C# <br>
 3 - Clone o repositório
 ```bash:
   https://github.com/Fcaspirro/crud_taskManager
